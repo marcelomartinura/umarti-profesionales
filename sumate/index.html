@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suma tu ficha de profesional | Umarti Profesionales</title>
+<meta name="description" content="Publica gratis tu ficha de profesional independiente y recibe consultas directo en tu WhatsApp o tu email.">
+<link rel="canonical" href="https://profesionales.umartidigital.com/sumate/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Suma tu ficha de profesional | Umarti Profesionales">
+<meta property="og:description" content="Publica gratis tu ficha de profesional independiente y recibe consultas directo en tu WhatsApp o tu email.">
+<meta property="og:url" content="https://profesionales.umartidigital.com/sumate/">
+<meta property="og:image" content="https://profesionales.umartidigital.com/assets/img/umarti-logo.png">
+<meta name="theme-color" content="#0B1E2F">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <a href="/" class="brand" aria-label="Umarti Profesionales, ir al inicio">
+      <img src="/assets/img/umarti-logo.webp" alt="" width="112" height="33">
+      <span class="brand__name">Profesionales</span>
+    </a>
+    <nav class="topbar__nav" aria-label="Secciones">
+      <a href="/#directorio">Buscar</a>
+      <a href="/#como-funciona">Cómo funciona</a>
+      <a href="/sumate/" class="btn btn--small">Suma tu ficha</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section join">
+    <div class="wrap join__grid">
+      <div class="join__intro">
+        <h1>Suma tu ficha al directorio</h1>
+        <p>Completa tus datos y publicamos tu ficha, con su propia página para que te encuentren en Google. Publicar tu ficha es gratis durante el lanzamiento.</p>
+        <ul class="ticks">
+          <li>Recibes las consultas directo, sin comisiones.</li>
+          <li>Revisamos cada ficha antes de publicarla.</li>
+          <li>Puedes pedir cambios o la baja cuando quieras.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="notice notice--ok" id="form-ok" role="status" hidden>Recibimos tus datos. Te avisamos por email cuando tu ficha esté publicada.</div>
+        <div class="notice notice--error" id="form-error" role="alert" hidden>No se pudieron enviar tus datos. Revisa que los campos obligatorios estén completos e inténtalo de nuevo.</div>
+        <form class="form" action="/registro.php" method="post">
+          <fieldset>
+            <legend>Tus datos</legend>
+            <div class="form__row">
+              <label>Nombre y apellido<input name="nombre" required maxlength="80" autocomplete="name"></label>
+              <label>Profesión<input name="profesion" required maxlength="60" placeholder="Por ejemplo: Contadora pública"></label>
+            </div>
+            <div class="form__row">
+              <label>Especialidad<select name="categoria" required><option>Contabilidad e impuestos</option><option>Derecho</option><option>Arquitectura y construcción</option><option>Ingeniería</option><option>Diseño y fotografía</option><option>Marketing y comunicación</option><option>Tecnología y desarrollo</option><option>Consultoría de negocios</option><option>Recursos humanos</option><option>Finanzas y seguros</option><option>Educación y capacitación</option><option>Traducción e idiomas</option><option>Salud y bienestar</option><option>Inmobiliario</option><option>Otra</option></select></label>
+              <label>Años de experiencia<input name="anios" type="number" min="0" max="60" inputmode="numeric"></label>
+            </div>
+            <div class="form__row">
+              <label>País<select name="pais" required><option>México</option><option>Argentina</option><option>Colombia</option><option>Chile</option><option>Perú</option><option>Uruguay</option><option>Paraguay</option><option>Bolivia</option><option>Ecuador</option><option>Panamá</option><option>Costa Rica</option><option>Guatemala</option><option>República Dominicana</option><option>Venezuela</option><option>Otro</option></select></label>
+              <label>Ciudad<input name="ciudad" required maxlength="60" autocomplete="address-level2"></label>
+            </div>
+            <label>Modalidad<select name="modalidad"><option>Online</option><option>Presencial</option><option>Online y presencial</option></select></label>
+          </fieldset>
+          <fieldset>
+            <legend>Tu trabajo</legend>
+            <label><span>Sobre ti <span class="hint">(hasta 400 caracteres)</span></span><textarea name="bio" rows="4" required maxlength="400" placeholder="A quién ayudas y cómo trabajas."></textarea></label>
+            <label><span>Servicios <span class="hint">(uno por línea, hasta 5)</span></span><textarea name="servicios" rows="5" required maxlength="500"></textarea></label>
+          </fieldset>
+          <fieldset>
+            <legend>Cómo te contactan</legend>
+            <div class="form__row">
+              <label><span>WhatsApp <span class="hint">(con código de país)</span></span><input name="whatsapp" type="tel" maxlength="25" placeholder="+52 442 123 4567" autocomplete="tel"></label>
+              <label>Email<input name="email" type="email" required maxlength="120" autocomplete="email"></label>
+            </div>
+            <div class="form__row">
+              <label><span>LinkedIn <span class="hint">(opcional)</span></span><input name="linkedin" type="url" maxlength="200" placeholder="https://www.linkedin.com/in/…"></label>
+              <label><span>Sitio web <span class="hint">(opcional)</span></span><input name="web" type="url" maxlength="200" placeholder="https://…"></label>
+            </div>
+          </fieldset>
+          <label class="check"><input type="checkbox" name="acepto" value="si" required> <span>Acepto que se publiquen estos datos en mi ficha del directorio.</span></label>
+          <label class="hp" aria-hidden="true">No completar<input name="sitio" tabindex="-1" autocomplete="off"></label>
+          <button type="submit" class="btn">Enviar mis datos</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p><strong>Umarti Profesionales</strong> es un proyecto de <a href="https://umartidigital.com">Umarti Digital</a>.</p>
+    <p>Los profesionales publican sus propios datos. Umarti no interviene en los acuerdos ni en los pagos entre profesionales y clientes.</p>
+    <nav aria-label="Pie de página"><a href="/">Directorio</a><a href="/sumate/">Suma tu ficha</a><a href="https://consultoria.umartidigital.com">Consultoría</a></nav>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var q = new URLSearchParams(location.search);
+    if (q.get('enviado') === '1') document.getElementById('form-ok').hidden = false;
+    if (q.get('enviado') === '0') document.getElementById('form-error').hidden = false;
+  })();
+</script>
+</body>
+</html>

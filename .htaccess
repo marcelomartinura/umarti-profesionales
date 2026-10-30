@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Forzar HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# No publicar los archivos internos del repositorio
+RedirectMatch 404 ^/(\.git|data|tools)(/|$)
+RedirectMatch 404 ^/README\.md$

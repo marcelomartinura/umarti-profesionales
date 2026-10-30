@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://profesionales.umartidigital.com/sitemap.xml
