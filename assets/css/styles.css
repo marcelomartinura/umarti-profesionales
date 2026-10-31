@@ -129,6 +129,9 @@ p { margin: 0 0 1em; }
   background: var(--white); border: 2px solid var(--teal-deep); color: var(--teal-deep); font-weight: 800; font-size: 0.95rem;
 }
 
+.upsell { margin: 22px 0 0; color: var(--slate); font-size: 0.98rem; max-width: 52ch; }
+.upsell a { color: var(--teal-deep); font-weight: 600; }
+
 /* Ficha */
 .sample { background: var(--sample); color: #5C4300; font-weight: 600; font-size: 0.97rem; padding: 12px 0; }
 .profile { padding: clamp(32px, 5vw, 56px) 0 clamp(56px, 8vw, 96px); }

@@ -110,7 +110,7 @@ FOOTER = f"""
   <div class="wrap footer__inner">
     <p><strong>{MARCA}</strong> es un proyecto de <a href="https://umartidigital.com">Umarti Digital</a>.</p>
     <p>Los profesionales publican sus propios datos. Umarti no interviene en los acuerdos ni en los pagos entre profesionales y clientes.</p>
-    <nav aria-label="Pie de página"><a href="/">Directorio</a><a href="/sumate/">Suma tu ficha</a><a href="https://consultoria.umartidigital.com">Consultoría</a></nav>
+    <nav aria-label="Pie de página"><a href="/">Directorio</a><a href="/sumate/">Suma tu ficha</a><a href="https://www.umartidigital.com/profesionales/">Sitio web y turnos para profesionales</a><a href="https://www.umartidigital.com/">Umarti Digital</a></nav>
   </div>
 </footer>
 """
@@ -228,6 +228,7 @@ def inicio(profs):
           <li><strong>Recibe consultas</strong> directo en tu WhatsApp o tu email.</li>
         </ol>
         <a href="/sumate/" class="btn">Suma tu ficha gratis</a>
+        <p class="upsell">¿Además quieres tu propio sitio web, agenda de turnos y WhatsApp automatizado? <a href="https://www.umartidigital.com/profesionales/">Conoce los servicios de Umarti Profesionales</a>.</p>
       </div>
     </div>
   </section>
@@ -333,6 +334,7 @@ def sumate():
           <li>Revisamos cada ficha antes de publicarla.</li>
           <li>Puedes pedir cambios o la baja cuando quieras.</li>
         </ul>
+        <p class="upsell">¿Quieres ir más allá de la ficha? Con <a href="https://www.umartidigital.com/profesionales/">Umarti Profesionales</a> tienes sitio web propio, agenda de turnos y WhatsApp automatizado.</p>
       </div>
       <div>
         <div class="notice notice--ok" id="form-ok" role="status" hidden>Recibimos tus datos. Te avisamos por email cuando tu ficha esté publicada.</div>
