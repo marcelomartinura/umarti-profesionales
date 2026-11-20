@@ -80,7 +80,7 @@ def head(titulo, descripcion, url, noindex=False, extra=""):
 <meta property="og:title" content="{e(titulo)}">
 <meta property="og:description" content="{e(descripcion)}">
 <meta property="og:url" content="{e(url)}">
-<meta property="og:image" content="{SITE}/assets/img/umarti-logo.png">
+<meta property="og:image" content="{SITE}/assets/img/umarti-profesionales-light.png">
 <meta name="theme-color" content="#0B1E2F">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,8 +92,7 @@ def head(titulo, descripcion, url, noindex=False, extra=""):
 <header class="topbar">
   <div class="wrap topbar__inner">
     <a href="/" class="brand" aria-label="{MARCA}, ir al inicio">
-      <img src="/assets/img/umarti-logo.webp" alt="" width="112" height="33">
-      <span class="brand__name">Profesionales</span>
+      <picture><source srcset="/assets/img/umarti-profesionales-light.webp" type="image/webp"><img src="/assets/img/umarti-profesionales-light.png" alt="Umarti Digital Profesionales" width="600" height="204"></picture>
     </a>
     <nav class="topbar__nav" aria-label="Secciones">
       <a href="/#directorio">Buscar</a>
@@ -108,6 +107,7 @@ def head(titulo, descripcion, url, noindex=False, extra=""):
 FOOTER = f"""
 <footer class="footer">
   <div class="wrap footer__inner">
+    <a href="/" class="footer__logo" aria-label="Umarti Digital Profesionales, ir al inicio"><picture><source srcset="/assets/img/umarti-profesionales-dark.webp" type="image/webp"><img src="/assets/img/umarti-profesionales-dark.png" alt="Umarti Digital Profesionales" width="600" height="204" loading="lazy"></picture></a>
     <p><strong>{MARCA}</strong> es un proyecto de <a href="https://umartidigital.com">Umarti Digital</a>.</p>
     <p>Los profesionales publican sus propios datos. Umarti no interviene en los acuerdos ni en los pagos entre profesionales y clientes.</p>
     <nav aria-label="Pie de página"><a href="/">Directorio</a><a href="/sumate/">Suma tu ficha</a><a href="https://www.umartidigital.com/profesionales/">Sitio web y turnos para profesionales</a><a href="https://www.umartidigital.com/">Umarti Digital</a></nav>
